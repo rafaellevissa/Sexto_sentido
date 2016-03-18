@@ -15,6 +15,29 @@ Maria, embora nunca tenha saído da cidade onde nasceu, apresenta característic
 Considerada a primeira dama da cidade, por ser herdeira de umas das famílias tradicionais de Xamy, Ana Lucia, esbanja sua riqueza de todas as formas possíveis. Muito carinhosa, essa sua característica a faz ser a mais próxima de todos as amigas, que embora não possam compartilhar ou ostentar dos mesmos privilégios e gostos, amam a sua presença. Tem um namorado e um filho, órfã de pai, deseja que sua amiga Carolina seja madrinha de seu filho. Carol como é conhecida, rejeita tal ideia.
 Principal amiga de Ana Lucia, Carolina ama tecnologia, foi a principal articuladora da implantação tecnológica do Parque Eólico, gerido pela empresa de Laura. Tem 42 anos, cresceu no único orfanato da cidade, costuma afirmar que não gosta de crianças, mesmo diante da insistência de Ana Lucia para que batize o seu filho. Costuma se relacionar com rapazes mais jovens no máximo 24 anos. Seu culto ao corpo, ultrapassa o limite da razão, pratica musculação todos os dias da semana e sempre imagina acima do peso ideal.....
 
+As cinco são amigas e estão na cidade de Xamy, conhecida por ser uma cidade turística.
+Realizam encontros ao menos uma vez por mês.
+Sempre se encontram no mesmo bar, pois gostam da caipitequila.
+Sempre conversam sobre a vida, seus medos e suas aventuras.
+Carolina e Ana Lúcia são amigas desde a infância, e andam sempre juntas além dos encontros mensais.
+Uma mensagem atípica de marcação do encontro no grupo do Whatsapp foi enviado por alguma das amigas, e elas aceitaram o convite.
+No dia marcado, após meia hora, Carolina mandou uma mensagem no grupo perguntando por ela.
+Após 15 minutos, Carolina impaciente mandou uma mensagem no privado e ficou abismada pois a ultima visualização dela foi a duas horas atrás,
+o que não é normal para Ana Lúcia.
+
+Laura, diante da situação, se manteve inconformada e:
+1. Ligar?
+1.1 Atende uma voz masculina nervosa, dizendo que foi engano. As amigas acham que pode ser o namorado, que Ana Lúcia havia comentado em um dos encontros.
+1.1.1 Liga novamente, e pergunta quem está falando.
+		1.1.1.1 Disse que era John;
+1.1.1.1.1 Laura reconhece o nome John e disse ser o novo affair dela
+1.1.1.1.2 Carolina disse que Ana Lúcia chama qualquer affair de John, costumes de amigas.
+		1.1.1.2 Atende e ouvi um som ambiente que não entende o que é;
+	1.1.2 Pede para Maria ligar com número privado, que tem um celular de última geração.
+		1.1.2.1 Maria ligou mas gaguejou e não soube dizer o que aconteceu
+1.1.1.1.1 
+1.1.1.1.2 
+		1.1.2.2 Rita se acha responsável pela turma e prontamente decide ligar no lugar de Maria
 ");
 
 return 0;
