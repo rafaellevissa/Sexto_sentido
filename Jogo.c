@@ -4,7 +4,7 @@
 
 int main()
 {
-lala não
+lala não!
 
 return 0;
 }
