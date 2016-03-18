@@ -38,6 +38,7 @@ Laura, diante da situação, se manteve inconformada e:
 1.1.1.1.1 
 1.1.1.1.2 
 		1.1.2.2 Rita se acha responsável pela turma e prontamente decide ligar no lugar de Maria
+		1.1.2.3 Linha teste Cheli
 ");
 
 return 0;
