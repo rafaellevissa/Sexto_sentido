@@ -4,7 +4,7 @@
 
 int main()
 {
-
+printf("uma história começou...");
 
 return 0;
 }
