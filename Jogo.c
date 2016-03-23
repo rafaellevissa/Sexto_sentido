@@ -11,9 +11,9 @@ void menu_principal(void);//Menu para o usuário escolher opções;
 void introducao(void); //introdução personagens:Laura;
 void introducao1(void); //introdução personagens:Rita;
 void introducao2(void); //introdução personagens:Maria;
-void introducao3(void); //introdução personagens;
-void introducao4(void); //introdução personagens;
-void introducao5(void); //introdução personagens;
+void introducao3(void); //introdução personagens:Ana lúcia;
+void introducao4(void); //introdução personagens:Carolina;
+void introducao5(void); //introdução personagens:Juntas;
 void parte1(void);
 void parte2(void);
 void parte3(void);
@@ -74,14 +74,14 @@ void menu_principal(void){
     }
 void introducao(void){
     printf("\nPersonagem: Laura\n\n");
-        printf("Laura, mulher pouco comum, em relacao ao tipo que estamos acostumados.\n");
+    printf("Laura, mulher pouco comum, em relacao ao tipo que estamos acostumados.\n");
     printf("Ingressou na faculdade de administração aos 16 anos, no segundo ano de faculdade já era presidente de uma\n");
-        printf("empresa júnior de importação e exportação de produtos baratos produzido no Oriente. Na realidade Laura\n");
-        printf("introduziu o conceito da loja R$ 1,99. Aos 20 anos resolveu sair da casa dos seus pais, queria investir\n");
-        printf("seu talento e conhecimento se aventurando numa grande Metrópole, foi então quando se mudou para São Paulo,\n");
-        printf("cidade grande com milhões de habitantes. Em Sampa fez seu MBA em In Comerc e energia sustentável.\n");
-        printf("No seu primeiro emprego como trainee conheceu Rita, uma secretária executiva, que passou a ser sua melhor amiga.\n");
-        printf("As 25 anos, Laura resolve se mudar para uma pequena cidade turística, conhecida pelas suas maravilhosas estancias, a cidade de Xamy, \n");
+    printf("empresa júnior de importação e exportação de produtos baratos produzido no Oriente. Na realidade Laura\n");
+    printf("introduziu o conceito da loja R$ 1,99. Aos 20 anos resolveu sair da casa dos seus pais, queria investir\n");
+    printf("seu talento e conhecimento se aventurando numa grande Metrópole, foi então quando se mudou para São Paulo,\n");
+    printf("cidade grande com milhões de habitantes. Em Sampa fez seu MBA em In Comerc e energia sustentável.\n");
+    printf("No seu primeiro emprego como trainee conheceu Rita, uma secretária executiva, que passou a ser sua melhor amiga.\n");
+    printf("As 25 anos, Laura resolve se mudar para uma pequena cidade turística, conhecida pelas suas maravilhosas estancias, a cidade de Xamy, \n");
     printf("localizada no Nordeste brasileiro e muito visitada no verão. Ela queria investir em um produto genuinamente novo, o vento.  \n");
     printf("Ela sentia que aquele seria um bom momento e o fez. Montou um parque de energia eólica.\n");
     printf("Dez anos depois Laura já era presidente de uma companhia de médio porte com mais de duzentos empregados, \n");
@@ -135,9 +135,8 @@ void parte1(void){
     printf("abismada pois a ultima visualização dela foi a duas horas atrás, o que não é normal para Ana Lúcia.\n");
     }
 void continuar(void){
-    int x;
     printf("\nDigite 1 para continuar ou qualquer outro valor para sair do jogo\n");
-    scanf("%d",&x);
+    scanf("%d",&a);
     if(a==1){
         system("cls");
     }
@@ -150,7 +149,7 @@ void continuar(void){
 int main()
 {
     nome_jogo();
-    /*continuar();
+    menu_principal();
     introducao();
     continuar();
     introducao1();
@@ -160,7 +159,6 @@ int main()
     introducao4();
     continuar();
     parte1();
-    continuar();*/
-    menu_principal();
-       return 0;
+    continuar();
+    return 0;
 }
