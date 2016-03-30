@@ -20,6 +20,8 @@ void parte3(void);
 void parte4(void);
 void parte5(void);
 void options(void);
+void capitulo1(void);
+void capitulo2(void);
 void continuar(void); //Função para limpar a tela e continuar ou não;
 int a; //variável para guardar valor para limpar a tela;
 int b; //variável para pegar decisão do usuário;
@@ -73,7 +75,7 @@ void menu_principal(void){
     printf("3- EXIT \n");
     scanf("%d",&op);
     if (op==1){
-        system("clear");
+
         introducao();
     }else if(op==2){
         options();
@@ -84,6 +86,7 @@ void menu_principal(void){
     }
 }
 void introducao(void){
+    system("clear");
     printf("\nPersonagem: Laura\n\n");
     printf("Laura, mulher pouco comum, em relacao ao tipo que estamos acostumados.\n");
     printf("Ingressou na faculdade de administração aos 16 anos, no segundo ano de faculdade já era presidente de uma\n");
@@ -104,6 +107,7 @@ void introducao(void){
     printf("se aproveitando de sua condição financeira. Fato passível de ocorrer.\n\n");
     printf("Pressione qualquer tecla para continuar (x para pular a introdução)");
     scanf("%c", &l);
+    scanf("%c", &l);
     system("clear");
     if (l=='x'){
         parte1();
@@ -111,6 +115,7 @@ void introducao(void){
     introducao1();
     }
 void introducao1(void){
+
     printf("\nPersonagem: Rita\n\n");
     printf("Rita, 52 anos, atualmente divorciada.  Conheceu seu ex-marido no jardim de infância. Tiveram um casamento que durou 30 anos,\n");
     printf("deste relacionamento tiveram uma filha. Por ter vivido um único relacionamento, não tem segurança para aconselhar as suas amigas,\n");
@@ -161,8 +166,12 @@ void introducao4(void){
     printf("costuma afirmar que não gosta de crianças, mesmo diante da insistência de Ana Lucia para que \n");
     printf("batize o seu filho. Costuma se relacionar com rapazes mais jovens no máximo 24 anos. Seu culto ao corpo, \n");
     printf("ultrapassa o limite da razão, pratica musculação todos os dias da semana e sempre imagina acima do peso ideal.\n");
+    printf("Pressione qualquer tecla para continuar (x para pular a introdução)");
     scanf("%c", &l);
     system("clear");
+    if (l=='x'){
+        parte1();
+    }
     parte1();
 }
 
@@ -175,13 +184,34 @@ void parte1(void){
     printf("Uma mensagem atípica de marcação do encontro no grupo do Whatsapp foi enviado por alguma das amigas,\n");
     printf("e elas aceitaram o convite. No dia marcado, após meia hora, Carolina mandou uma mensagem no grupo\n");
     printf("perguntando por ela. Após 15 minutos, Carolina impaciente mandou uma mensagem no privado e ficou \n");
-    printf("abismada pois a ultima visualização dela foi a duas horas atrás, o que não é normal para Ana Lúcia.\n");
+    printf("abismada pois a ultima visualização dela foi a duas horas atrás, o que não é normal para Ana Lúcia....\n");
+    printf("pressione qualquer tecla para começar...");
+    scanf("%c",&l);
+    system("clear");
+    printf("escolha uma das opções:\n");
+    printf("1. Ligar para Ana \n");
+    printf("2. Continuar bebendo \n");
+    scanf("%c",&l);
+    if (l=='1'){
+        system("clear");
+        printf("Laura logo percebe que a situação é atípica e olha firmemente para seu telefone e inconformada com o clina ruim que logo se estabelece, resolveu ligar.\n");
+        capitulo1();
+    }else if(l=='2'){
+        system("clear");
+        printf("vocês decidem beber mais ... seus sentidos ficam mais abalados!");
+        capitulo2();
+    }else{
+        scanf("%c",&l);
+        parte1();
     }
+}
+
+
 void continuar(void){
     int x;
     printf("\nDigite 1 para continuar ou qualquer outro valor para sair do jogo\n");
     scanf("%d",&x);
-    if(a==1){
+    if(x==1){
         system("clear");
     }
     else{
@@ -192,25 +222,33 @@ void continuar(void){
 void options(void){
     system("clear");
     printf("OPTIONS:\n");
+    printf("Audio: \n");
+    printf("Tamanho da fonte: \n");
+    printf("Cor da fonte: \n");
+    printf("cor do plano de fundo: \n");
+
+}
+
+
+//capitulo1
+void capitulo1(void){
+
+    printf("capitulo 1\n");
+}
+
+//capitulo2
+void capitulo2(void){
+
+    printf("capitulo 2\n");
 }
 
 //INÍCIO DO PROGRAMA
 int main()
 {
     nome_jogo();
-    /*continuar();
-    introducao();
-    continuar();
-    introducao1();
-    introducao2();
-    continuar();
-    introducao3();
-    introducao4();
-    continuar();
-    parte1();
-    continuar();*/
     menu_principal();
-       return 0;
+
+    return 0;
        /*
 
        Laura, mulher pouco comum, em relação ao tipo que estamos acostumados. Ingressou na faculdade de administração aos 16 anos, no segundo ano de faculdade já era presidente de uma empresa júnior de importação e exportação de produtos baratos produzido no Oriente. Na realidade Laura introduziu o conceito da loja R$ 1,99. Aos 20 anos   resolveu sair da casa dos seus pais, queria investir seu talento e conhecimento se aventurando numa grande Metrópole, foi então quando se mudou para São Paulo, cidade grande com milhões de habitantes.  Em Sampa fez seu MBA em In Comerc e Energia Sustentável. No seu primeiro emprego como trainee conheceu Rita, uma secretária executiva, que passou a ser sua melhor amiga.
@@ -297,14 +335,4 @@ Aquele rosto era conhecido, não era um dos seus empregados. Estática ela obser
  O elevador seguiu parando num andar mais acima. Para sua surpresa o jovem alto de cabelos dourados aguardava do lado de fora. Desta vez o rapaz entra sem pressa no elevador, enquanto ela se contorcia para esconder o rosto, tamanha era sua vergonha por não ter ajudado o garoto no andar abaixo.
 Sem acreditar na força produzida por um olhar, ela o olha bem nos olhos o suficiente para ele se sentir magnetizado, enquanto uma força estranha lhe impedia de desviar o olhar. Alguma coisa estranha havia naqueles olhares. Seria ali um momento propicio de amor a primeira vista? Para o amor chegar não há dia, não há hora e nem momento marcado para acontecer. Mas a identidade daquele rapaz trazia consigo outro mistério...
 */
-
-
-
-
-
-
-
-
-
-
 }
