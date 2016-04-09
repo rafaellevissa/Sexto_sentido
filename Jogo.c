@@ -23,6 +23,7 @@ void capitulo1_2_1_2(void);
 void capitulo2(void);
 void capitulo2_1(void);
 void capitulo2_2(void);
+void capitulo1_2_3(void);
 void capitulo2_1_1_1_2(void);
 void capitulo2_1_1_1(void);
 void capitulo2_1_1_1_1(void);
@@ -33,6 +34,7 @@ void continuar(void); //Função para limpar a tela e continuar ou não;
 int a; //variável para guardar valor para limpar a tela;
 int b; //variável para pegar decisão do usuário;
 char l;
+int score;
 //gerador de numero aleatorio
 int random_number(int min_num, int max_num)
 {
@@ -48,6 +50,20 @@ int random_number(int min_num, int max_num)
     srand(time(NULL));
     result = (rand()%(hi_num-low_num))+low_num;
     return result;
+}
+
+//options
+void options(void){
+    system("clear");
+
+    printf("OPTIONS:\n");
+    printf("Sexto sentido é um RPG investigativo que conta a história de um grupo de mulheres e seu cotidiano em um dia atípico que irá revelar segredos e um grande mistério.\n");
+    printf("Tutorial\n");
+    printf("Audio: \n");
+    printf("Tamanho da fonte: \n");
+    printf("Cor da fonte: \n");
+    printf("cor do plano de fundo: \n");
+
 }
 
 
@@ -124,7 +140,7 @@ void introducao(void){
     printf("localizada no Nordeste brasileiro e muito visitada no verão. Ela queria investir em um produto genuinamente novo, o vento.  \n");
     printf("Ela sentia que aquele seria um bom momento e o fez. Montou um parque de energia eólica.\n");
     printf("Dez anos depois Laura já era presidente de uma companhia de médio porte com mais de duzentos empregados, \n");
-    printf("60 dos moradores de Xamy eram seus empregados. Dona do maior parque eólico da região. Assim passou a ser conhecida como\n");
+    printf("60 por cento dos moradores de Xamy eram seus empregados. Dona do maior parque eólico da região. Assim passou a ser conhecida como\n");
     printf("“A garota dos ventos”, e aos 36 anos já é uma milionária. Com todo esse sucesso, ela ainda se sente frustrada, gostaria de \n");
     printf("engravidar antes dos 40 anos. Apesar de ser uma grande empreendedora, Laura não consegue ter o mesmo desempenho quando \n");
     printf("o assunto é relacionamento pessoal. Está solteira e nunca teve relacionamentos duradouros. Laura sempre atribui seu fracasso\n");
@@ -158,7 +174,7 @@ void introducao2(void){
     printf("\nPersonagem: Maria\n\n");
     printf("Maria, embora nunca tenha saído da cidade onde nasceu, apresenta características nada típica daquele lugar, \n");
     printf("formada em Teatro, é uma excelente atriz, mas sua profissão não lhe garantiu grandes benefícios, \n");
-    printf("uma vez que suas oportunidades foram bastantes parcas. Seu gosto por baladas, a mantem pouco \n");
+    printf("uma vez que suas oportunidades foram bastantes fracas. Seu gosto por baladas, a mantem pouco \n");
     printf("distante do tipo de homem que gosta de se relacionar, pois os mesmos normalmente estão na faixa dos 50 anos. \n");
     printf("De todas as suas amigas, ela costuma se irritar com Ana Lucia, que sempre faz questão de lembrá-la que vive em uma vida de sonhos.\n");
     printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
@@ -175,7 +191,7 @@ void introducao3(void){
     printf("Ana Lucia, esbanja sua riqueza de todas as formas possíveis. Muito carinhosa, essa sua característica a \n");
     printf("faz ser a mais próxima de todos as amigas, que embora não possam compartilhar ou ostentar dos mesmos \n");
     printf("privilégios e gostos, amam a sua presença. Tem um namorado e um filho, órfã de pai, \n");
-    printf("deseja que sua amiga Carolina seja madrinha de seu filho. Carol como é conhecida, rejeita tal ideia.\n");
+    printf("deseja que sua amiga Carolina seja madrinha de seu filho. Mais conhecida como Carol, ela rejeita tal ideia.\n");
     printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("clear");
@@ -189,8 +205,8 @@ void introducao4(void){
     printf("Principal amiga de Ana Lucia, Carolina ama tecnologia, foi a principal articuladora da implantação tecnológica \n");
     printf("do Parque Eólico, gerido pela empresa de Laura. Tem 42 anos, cresceu no único orfanato da cidade, \n");
     printf("costuma afirmar que não gosta de crianças, mesmo diante da insistência de Ana Lucia para que \n");
-    printf("batize o seu filho. Costuma se relacionar com rapazes mais jovens no máximo 24 anos. Seu culto ao corpo, \n");
-    printf("ultrapassa o limite da razão, pratica musculação todos os dias da semana e sempre imagina acima do peso ideal.\n");
+    printf("batize o seu filho. Costuma se relacionar com rapazes mais jovens, de no máximo 24 anos. Seu culto ao corpo, \n");
+    printf("ultrapassa o limite da razão, pratica musculação todos os dias da semana e sempre se imagina acima do peso ideal.\n");
     printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("clear");
@@ -213,16 +229,19 @@ void parte1(void){
     printf("pressione qualquer tecla para começar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Ligar para Ana \n");
     printf("2. Continuar bebendo \n");
     scanf("%c",&l);
     if (l=='1'){
         system("clear");
-        printf("Laura logo percebe que a situação é atípica e olha firmemente para seu telefone e inconformada com o clina ruim que logo se estabelece, resolveu ligar.\n");
+        printf("XP: %d\n",score);
+        printf("Laura logo percebe que a situação é atípica e olha firmemente para seu telefone e inconformada com o clima ruim que logo se estabelece, resolveu ligar.\n");
         capitulo1();
     }else if(l=='2'){
         system("clear");
+        printf("XP: %d\n",score);
         printf("vocês decidem beber mais ... seus sentidos ficam mais abalados!\n");
         capitulo2();
     }else{
@@ -238,24 +257,12 @@ void continuar(void){
     scanf("%d",&x);
     if(x==1){
         system("clear");
+        printf("XP: %d\n",score);
     }
     else{
         exit(0);
         }
     }
-
-void options(void){
-    system("clear");
-    printf("OPTIONS:\n");
-    printf("Sexto sentido é um RPG investigativo que conta a história de um grupo de mulheres e seu cotidiano em um dia atípico que irá revelar segredos e um grande mistério.\n");
-    printf("Tutorial\n");
-    printf("Audio: \n");
-    printf("Tamanho da fonte: \n");
-    printf("Cor da fonte: \n");
-    printf("cor do plano de fundo: \n");
-
-}
-
 
 //capitulo1
 void capitulo1(void){
@@ -267,9 +274,11 @@ void capitulo1(void){
          printf("De imediato o clima poderia mudar de vez e o mistério do desaparecimento de Ana seria solucionado.\n ");
          printf("Se ao atender ao telefone uma voz masculina nervosa, dizendo que foi engano, não tivesse aumentado ainda mais a angustia das moças.\n");
          printf("As amigas acham que pode ser o namorado, que Ana Lucia havia comentado em um dos encontros.\n");
-         printf("pressione qualquer tecla para continuar...\n");
+         printf("e a ligação acaba!\n");
+         printf("pressione qualquer tecla para continuar...");
          scanf("%c",&l);
          system("clear");
+         printf("XP: %d\n",score);
          y=random_number(1,2);
          if (y==1){
              capitulo1_1(); //homem se identifica
@@ -284,14 +293,15 @@ void capitulo1(void){
 //capitulo1.1
 void capitulo1_1(void){
     printf("capitulo 1.1\n");
-    printf("Liga e um homem se identifica\n");
+    printf("Liga novamente e um homem se identifica\n");
     printf("Sendo assim Carol pede para que Laura ligue novamente e se propôs a interrogar a pessoa que atendesse do outro lado da linha. Mas ao ligar novamente, e perguntar “quem está falando?” Escutou...\n");
-    printf("Alô quem está falando aqui é o John, eu já falei que a senhora ligou errado. Por favor não me incomode.\n");
+    printf("-Alô quem está falando aqui é o John, eu já falei que a senhora ligou errado. Por favor não me incomode.\n");
     printf("Animada Laura reconhece o nome John e disse ser o novo affair de Ana Lucia. Contudo se esquece de um detalhe muito importante relatado por Carol.\n");
     printf("Carol disse que Ana Lúcia chama qualquer affair de John, costumes de amigas. Com isso a possibilidade de que o sujeito não estivesse falando a verdade estava pairando no ar.\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. completar \n");
     printf("2. completar \n");
@@ -313,14 +323,15 @@ void capitulo1_2(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Ir à casa de Ana Lúcia\n");
-    printf("2. Ligar para Ana Lúcia \n");
+    printf("2. Ligar para Ana Lúcia de um celular de número privado\n");
     scanf("%c",&l);
     if (l=='1'){
         capitulo1_2_1();
     }else if(l=='2'){
-        capitulo1();
+        capitulo1_2_3();
     }
 }
 
@@ -330,9 +341,16 @@ void capitulo1_2_1(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     int x;
     x=random_number(1,2);
      if (x==1){
+        printf("Entre olhares intrigantes as amigas percebem que há algo errado.  Corações acelerados  e bocas ofegantes, o cenário de desespero, antes constituído de alegrias , era agora a própria desilusão. Iniciaram uma calorosa discussão envolvendo diversas especulações e uma pergunta que não queria calar: Por que um celular de uma pessoa que supostamente estaria sumida , ainda estava chamando? Laura chama atenção sobre o que elas deveriam fazer diante daquela situação?\n");
+        printf("e elas chegam na casa de Ana Lúcia\n");
+        printf("Carolina nunca teve coragem de entrar na casa da sua melhor amiga, para ela, ");
+        printf("era um lugar sombrio e muito cheio de mistérios, mas Laura, era o oposto, a coragem ");
+        printf("em pessoa e logo depois do receio subiu as escadas que dava num portão e, ");
+        printf("surpreendentemente, encontrou o grande cadeado aberto");
         printf("Encontra a porta semiaberta.\n");
         printf("escolha uma das opções:\n");
         printf("1. Entrar\n");
@@ -360,12 +378,33 @@ void capitulo1_2_1(void){
 
 }
 
+//capitulo1_2_3();
+void capitulo1_2_3(void){
+    printf("completar");
+    printf("pressione qualquer tecla para continuar...");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. Ir à casa de Ana Lúcia\n");
+    printf("2. COMPLETAR\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        capitulo1_2_1();
+    }else if(l=='2'){
+
+    }
+}
+
+
+
 //capitulo1.2.1.1:
 void capitulo1_2_1_1(void){
     printf("capitulo 1.2.1.1\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Perguntar aos vizinhos\n");
     printf("2. Bater à porta novamente \n");
@@ -383,6 +422,7 @@ void capitulo1_2_1_2(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     int x;
     x=random_number(1,2);
      if (x==1){
@@ -403,15 +443,18 @@ void capitulo2(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Ir à casa de Ana Lúcia\n");
     printf("2. Ligar para Ana Lúcia \n");
     scanf("%c",&l);
     if (l=='1'){
         system("clear");
+        printf("XP: %d\n",score);
         capitulo2_1();
     }else if(l=='2'){
         system("clear");
+        printf("XP: %d\n",score);
         capitulo2_2();
     }
 
@@ -449,6 +492,7 @@ void capitulo2_1_1(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Tocar na companhia\n");
     printf("2. Olhar pela janela fechada \n");
@@ -481,6 +525,7 @@ void capitulo2_1_1_1_1(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Falar com os vizinhos\n");
     printf("2. Ligar para o amigo policial \n");
@@ -498,6 +543,7 @@ void capitulo2_1_1_1_2(void){
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("clear");
+    printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
     printf("1. Pergunta o nome dele\n");
     printf("2. Empurra ele e entrar \n");
@@ -516,6 +562,7 @@ void capitulo2_1_1_1_2(void){
 void capitulo2_2(void){
     printf("capitulo 2.2\n");
     system("clear");
+    printf("XP: %d\n",score);
     capitulo1_1();
 
 }
@@ -523,6 +570,7 @@ void capitulo2_2(void){
 //INÍCIO DO PROGRAMA
 int main()
 {
+    score=0;
     nome_jogo();
     menu_principal();
 
