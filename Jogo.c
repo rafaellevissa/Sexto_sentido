@@ -34,6 +34,7 @@ void continuar(void); //Função para limpar a tela e continuar ou não;
 int a; //variável para guardar valor para limpar a tela;
 int b; //variável para pegar decisão do usuário;
 char l;
+int x;
 int score;
 //gerador de numero aleatorio
 int random_number(int min_num, int max_num)
@@ -300,6 +301,7 @@ void capitulo1_1(void){
     printf("Carol disse que Ana Lúcia chama qualquer affair de John, costumes de amigas. Com isso a possibilidade de que o sujeito não estivesse falando a verdade estava pairando no ar.\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
+    scanf("%c",&l);
     system("clear");
     printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
@@ -346,20 +348,21 @@ void capitulo1_2_1(void){
     x=random_number(1,2);
      if (x==1){
         printf("Entre olhares intrigantes as amigas percebem que há algo errado.  Corações acelerados  e bocas ofegantes, o cenário de desespero, antes constituído de alegrias , era agora a própria desilusão. Iniciaram uma calorosa discussão envolvendo diversas especulações e uma pergunta que não queria calar: Por que um celular de uma pessoa que supostamente estaria sumida , ainda estava chamando? Laura chama atenção sobre o que elas deveriam fazer diante daquela situação?\n");
-        printf("e elas chegam na casa de Ana Lúcia\n");
-        printf("Carolina nunca teve coragem de entrar na casa da sua melhor amiga, para ela, ");
-        printf("era um lugar sombrio e muito cheio de mistérios, mas Laura, era o oposto, a coragem ");
-        printf("em pessoa e logo depois do receio subiu as escadas que dava num portão e, ");
-        printf("surpreendentemente, encontrou o grande cadeado aberto");
+        printf("e elas chegam na casa de Ana Lúcia\n");        
         printf("Encontra a porta semiaberta.\n");
         printf("escolha uma das opções:\n");
         printf("1. Entrar\n");
-        printf("2. Ligar o amigo policial \n");
+        printf("2. Ligar para o amigo policial \n");
         scanf("%c",&l);
         if (l=='1'){
-            printf("completar...");
+            capitulo1_2_1_3();
         }else if(l=='2'){
-            capitulo1_2_1_2();
+            z=capitulo1_2_1_2();
+            if(z==0){
+                capitulo1_2_1();
+            }else if(z==1){
+                printf("completar");
+            }
         }
      }else if(x==2){
          printf("encontra a porta fechada e ouve algo estranho lá dentro\n");
@@ -372,9 +375,164 @@ void capitulo1_2_1(void){
             capitulo1_2_1_1();
          }else if(l=='2'){
             printf("Laura encostou o ouvido na porta e ouviu que havia mais uma pessoa na sala, passos de uma pessoa usando botas molhadas correndo. Ela desceu assustada para pedir ajuda e todas pareciam não entender ou escutar o que ela dizia. Entrou em desespero.\n");
-            printf("continuar");
+            capitulo1_2_1_3();
          }
      }
+
+}
+
+//capitulo1_2_1_3()
+void capitulo1_2_1_3(void){
+    printf("Laura encostou o ouvido na porta  da frente, quando  ouviu  mais de uma pessoa na sala, passos de uma pessoa usando botas molhadas correndo. Ela desceu assustada para pedir ajuda e todas pareciam não entender ou escutar o que ela dizia. Entrou em desespero.");
+    printf("pressione qualquer tecla para continuar.\n");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. ligar para o amigo policial\n");
+    printf("2. bater na porta\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        z=capitulo1_2_1_2();
+        if(z==0){
+            capitulo1_2_1_3();
+        }else if(z==1){
+            printf("completar");
+        }
+    }else if(l=='2'){
+        capitulo1_2_1_3_1();
+    }
+}
+
+//capitulo1_2_1_3_1()
+void capitulo1_2_1_3_1(void){
+    printf("ninguem atende...\n");
+    printf("Mesmo tendo escutado mais de uma pessoa conversando na sala, Laura desconfia, pois ninguém atende a porta");
+    printf("Conversando com Maria , Laura decide...");
+    printf("pressione qualquer tecla para continuar.\n");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. Ligar para o amigo policial\n");
+    printf("2. Decidem olhar ao redor da casa\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        z=capitulo1_2_1_2();
+        if(z==0){
+            capitulo1_2_1_3_1();
+        }else if(z==1){
+            printf("completar");
+        }
+    }else if(l=='2'){
+        capitulo1_2_1_3_1_2();
+    }
+}
+
+//capitulo1_2_1_3_1_2()
+void capitulo1_2_1_3_1_2(void){
+    printf("encontram uma janela aberta\n");
+    printf("pressione qualquer tecla para continuar.\n");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. entrar na casa pela janela\n");
+    printf("2. ligar para o amigo policial\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        capitulo1_2_1_3();
+    }else if(l=='2'){
+        z=capitulo1_2_1_2();
+        if(z==0){
+            capitulo1_2_1_3_1_2();
+        }else if(z==1){
+            printf("completar");
+        }
+    }
+}
+
+//capitulo1_2_1_3
+void capitulo1_2_1_3(void){
+    printf("Carolina nunca teve coragem de entrar na casa da sua melhor amiga, para ela, ");
+    printf("era um lugar sombrio e muito cheio de mistérios, mas Laura, era o oposto, a coragem");
+    printf("em pessoa e logo depois do receio entrou. \n");
+    printf("Maria entrou logo depois de Laura, sem demonstrar nenhum sinal de medo, em seguida");
+    printf(" a luz se apagou e ela gritou sem parar...");
+    printf("Laura pediu que ela ficasse calma, pois poderia chamar a atenção");
+    printf("pressione qualquer tecla para continuar.\n");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. ligar a luz\n");
+    printf("2. ligar lanterna do celular\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        capitulo1_2_1_3_1();
+    }else if(l=='2'){
+        capitulo1_2_1_3_1();
+    }
+}
+
+//capitulo1_2_1_3_1
+void capitulo1_2_1_3_1(void){
+   printf("elas encontram um quarto aberto\n");
+   printf("As mãos de Laura passeiam vagarosamente sobre uma penteadeira, encontrando um pente de largos dentes, utilizado por pessoas do cabelo crespo, na sua forma  original, . Mais um mistério... Ana Lúcia jamais usaria aquele tipo de artefato nas suas madeixas loiras. Todas estavam se perguntando a quem aquele pente pertencia?");
+   printf("pressione qualquer tecla para continuar.\n");
+   scanf("%c",&l);
+   system("clear");
+   printf("XP: %d\n",score);
+   printf("escolha uma das opções:\n");
+   printf("1. Mostrar o pente às amigas\n");
+   printf("2. Esconder o pente\n");
+   scanf("%c",&l);
+   if (l=='1'){
+       capitulo1_2_1_3_1_1();
+   }else if(l=='2'){
+       capitulo1_2_1_3_1_2();
+   }
+}
+
+//capitulo1_2_1_3_1_1()
+void capitulo1_2_1_3_1_1(void){
+    printf("Ao mostrar o pente para as amigas, percebesse muitas dúvidas e insegurança no ar, aquele pente seria um sinal de que algo estava errado");
+    printf("pressione qualquer tecla para continuar.\n");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    printf("escolha uma das opções:\n");
+    printf("1. completar\n");
+    printf("2. completar\n");
+    scanf("%c",&l);
+    if (l=='1'){
+        printf("completar");
+    }else if(l=='2'){
+        printf("completar");
+    }
+
+}
+
+//capitulo1_2_1_3_1_1_1()
+void capitulo1_2_1_3_1_1_1(void){
+    printf("Carolina ver o pente e argumenta com Laura");
+    printf("Carolina pergunta a Laura porque ela não mostrou o pente para as meninas . Laura argumenta que não quer deixa as meninas ainda mais apavorada, que ela sabe o que está fazendo. Mas Carolina não concorda , e pedi para Laura contar sobre o pente");
+    capitulo1_2_1_3_1_1();
+}
+
+//capitulo1_2_1_3_1_2();
+void capitulo1_2_1_3_1_2(void){
+    printf("Por que será que Laura não mostrou o pente as amigas ? Será que ela imagino que mostrando o pente  as amigas ficariam mais nervosas e preocupadas com Ana Lúcia!");
+    scanf("%c",&l);
+    system("clear");
+    printf("XP: %d\n",score);
+    int x;
+    x=random_number(1,2);
+    if (x==1){
+        capitulo1_2_1_3_1_1_1();
+    }else if(x==2){
+        printf("completar");
+    }
 
 }
 
@@ -417,7 +575,7 @@ void capitulo1_2_1_1(void){
 }
 
 //capitulo1_2_1_2
-void capitulo1_2_1_2(void){
+int capitulo1_2_1_2(void){
     printf("capitulo 1.2.1.2\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
@@ -427,10 +585,10 @@ void capitulo1_2_1_2(void){
     x=random_number(1,2);
      if (x==1){
         printf("Marcos o policial informou que a policia só poderia entrar no caso se o desaparecimento fosse registrado após 72 horas.\n");
-        printf("continuar...");
+        return 0;
     }else if(x==2){
          printf("Prontamente o policial Marcos prometeu ajudar, mas tinha que fazer uma diligência antes de se deslocar para a casa de Ana Lucia.\n");
-         printf("continuar...");
+         return 1;
      }
 
 }
@@ -533,7 +691,12 @@ void capitulo2_1_1_1_1(void){
     if (l=='1'){
         printf("completar...");
     }else if(l=='2'){
-        //Ir para 1.2.1.1.2 ()
+        z=capitulo1_2_1_2();
+        if(z==0){
+            capitulo2_1_1_1_1();
+        }else if(z==1){
+            printf("completar");
+        }
     }
 }
 
