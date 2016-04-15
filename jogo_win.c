@@ -5,6 +5,7 @@
 #include <ctype.h>
 #include <time.h>
 
+
 //Declaração das funções e variáveis:
 void nome_jogo(void); //logo inicial do jogo;
 void menu_principal(void);//Menu para o usuário escolher opções;
@@ -158,7 +159,6 @@ void introducao(void){
     printf("se aproveitando de sua condição financeira. Fato passível de ocorrer.\n\n");
     printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
-    scanf("%c", &l);
     system("cls");
     if (l=='x'){
         parte1();
@@ -244,6 +244,7 @@ void parte1(void){
     printf("1. Ligar para Ana \n");
     printf("2. Continuar bebendo \n");
     scanf("%c",&l);
+    
     if (l=='1'){
         system("cls");
         printf("XP: %d\n",score);
@@ -310,7 +311,6 @@ void capitulo1_1(void){
     printf("Carol disse que Ana Lúcia chama qualquer affair de John, costumes de amigas. Com isso a possibilidade de que o sujeito não estivesse falando a verdade estava pairando no ar.\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
-    scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
     printf("escolha uma das opções:\n");
@@ -318,9 +318,7 @@ void capitulo1_1(void){
     printf("2. completar \n");
     scanf("%c",&l);
     /*if (l=='1'){
-
     }else if(l='2'){
-
     }*/
 
 }
@@ -719,7 +717,8 @@ void capitulo2_1_1_1_2(void){
     printf("escolha uma das opções:\n");
     printf("1. Pergunta o nome dele\n");
     printf("2. Empurra ele e entrar \n");
-    scanf("%c",&l);
+    scanf
+	("%c",&l);
     if (l=='1'){
         printf("completar...");
     }else if(l=='2'){
