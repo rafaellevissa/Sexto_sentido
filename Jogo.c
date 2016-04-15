@@ -19,22 +19,31 @@ void options(void);
 void capitulo1(void);
 void capitulo1_1(void);
 void capitulo1_2(void);
-void capitulo1_2_1_2(void);
 void capitulo2(void);
 void capitulo2_1(void);
 void capitulo2_2(void);
+void capitulo1_2_1_3_1_2(void);
 void capitulo1_2_3(void);
+void capitulo1_2_1_3(void);
+void capitulo1_2_1_4(void);
 void capitulo2_1_1_1_2(void);
 void capitulo2_1_1_1(void);
 void capitulo2_1_1_1_1(void);
 void capitulo1_2_1_1(void);
 void capitulo1_2_1(void);
 void capitulo2_1_1(void);
+int capitulo1_2_1_2(void);
+void capitulo1_2_1_3_1(void);
+void capitulo1_2_1_3_3(void);
+void capitulo1_2_1_3_1_1(void);
+void capitulo1_2_1_3_1_3(void);
+
 void continuar(void); //Função para limpar a tela e continuar ou não;
 int a; //variável para guardar valor para limpar a tela;
 int b; //variável para pegar decisão do usuário;
 char l;
 int x;
+int z;
 int score;
 //gerador de numero aleatorio
 int random_number(int min_num, int max_num)
@@ -348,7 +357,7 @@ void capitulo1_2_1(void){
     x=random_number(1,2);
      if (x==1){
         printf("Entre olhares intrigantes as amigas percebem que há algo errado.  Corações acelerados  e bocas ofegantes, o cenário de desespero, antes constituído de alegrias , era agora a própria desilusão. Iniciaram uma calorosa discussão envolvendo diversas especulações e uma pergunta que não queria calar: Por que um celular de uma pessoa que supostamente estaria sumida , ainda estava chamando? Laura chama atenção sobre o que elas deveriam fazer diante daquela situação?\n");
-        printf("e elas chegam na casa de Ana Lúcia\n");        
+        printf("e elas chegam na casa de Ana Lúcia\n");
         printf("Encontra a porta semiaberta.\n");
         printf("escolha uma das opções:\n");
         printf("1. Entrar\n");
@@ -395,7 +404,7 @@ void capitulo1_2_1_3(void){
     if (l=='1'){
         z=capitulo1_2_1_2();
         if(z==0){
-            capitulo1_2_1_3();
+            capitulo1_2_1_4();
         }else if(z==1){
             printf("completar");
         }
@@ -420,7 +429,7 @@ void capitulo1_2_1_3_1(void){
     if (l=='1'){
         z=capitulo1_2_1_2();
         if(z==0){
-            capitulo1_2_1_3_1();
+            capitulo1_2_1_3_3();
         }else if(z==1){
             printf("completar");
         }
@@ -441,11 +450,11 @@ void capitulo1_2_1_3_1_2(void){
     printf("2. ligar para o amigo policial\n");
     scanf("%c",&l);
     if (l=='1'){
-        capitulo1_2_1_3();
+        capitulo1_2_1_4();
     }else if(l=='2'){
         z=capitulo1_2_1_2();
         if(z==0){
-            capitulo1_2_1_3_1_2();
+            capitulo1_2_1_3_1_3();
         }else if(z==1){
             printf("completar");
         }
@@ -453,7 +462,7 @@ void capitulo1_2_1_3_1_2(void){
 }
 
 //capitulo1_2_1_3
-void capitulo1_2_1_3(void){
+void capitulo1_2_1_4(void){
     printf("Carolina nunca teve coragem de entrar na casa da sua melhor amiga, para ela, ");
     printf("era um lugar sombrio e muito cheio de mistérios, mas Laura, era o oposto, a coragem");
     printf("em pessoa e logo depois do receio entrou. \n");
@@ -476,7 +485,7 @@ void capitulo1_2_1_3(void){
 }
 
 //capitulo1_2_1_3_1
-void capitulo1_2_1_3_1(void){
+void capitulo1_2_1_3_3(void){
    printf("elas encontram um quarto aberto\n");
    printf("As mãos de Laura passeiam vagarosamente sobre uma penteadeira, encontrando um pente de largos dentes, utilizado por pessoas do cabelo crespo, na sua forma  original, . Mais um mistério... Ana Lúcia jamais usaria aquele tipo de artefato nas suas madeixas loiras. Todas estavam se perguntando a quem aquele pente pertencia?");
    printf("pressione qualquer tecla para continuar.\n");
@@ -490,7 +499,7 @@ void capitulo1_2_1_3_1(void){
    if (l=='1'){
        capitulo1_2_1_3_1_1();
    }else if(l=='2'){
-       capitulo1_2_1_3_1_2();
+       capitulo1_2_1_3_1_3();
    }
 }
 
@@ -521,7 +530,7 @@ void capitulo1_2_1_3_1_1_1(void){
 }
 
 //capitulo1_2_1_3_1_2();
-void capitulo1_2_1_3_1_2(void){
+void capitulo1_2_1_3_1_3(void){
     printf("Por que será que Laura não mostrou o pente as amigas ? Será que ela imagino que mostrando o pente  as amigas ficariam mais nervosas e preocupadas com Ana Lúcia!");
     scanf("%c",&l);
     system("clear");
