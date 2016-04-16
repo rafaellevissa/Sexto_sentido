@@ -4,6 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
+#include <locale.h>
 
 
 //Declaração das funções e variáveis:
@@ -66,68 +67,46 @@ int random_number(int min_num, int max_num)
 //options
 void options(void){
     system("cls");
-
     printf("OPTIONS:\n");
-    printf("Sexto sentido é um RPG investigativo que conta a história de um grupo de mulheres e seu cotidiano em um dia atípico que irá revelar segredos e um grande mistério.\n");
-    printf("Tutorial\n");
-    printf("Audio: \n");
-    printf("Tamanho da fonte: \n");
-    printf("Cor da fonte: \n");
-    printf("cor do plano de fundo: \n");
-
+    printf("\n\nSexto sentido é um RPG investigativo que conta a história de um grupo de mulheres\n"); 
+	printf("e seu cotidiano em um dia atípico que irá revelar segredos e um grande mistério.\n");
+    printf("\nTutorial:\n");
+    printf("\nAudio: \n");
+    printf("\nTamanho da fonte: \n");
+    printf("\nCor da fonte: \n");
+    printf("\nCor do plano de fundo: \n");
 }
-
 
 //Bloco de funções:
 void nome_jogo(void){
-    printf("                                  * * ****\n");
-    printf("                                *       ***                               *\n");
-    printf("                               *         **                              **\n");
-    printf("                               **        *                               **\n");
-    printf("                                ***                     ***    ***     ********    ****\n");
-    printf("                               ** ***           ***    * ***  **** *  ********    * ***  *\n");
-    printf("                                *** ***        * ***      *** *****      **      *   ****\n");
-    printf("                                  *** ***     *   ***      ***  **       **     **    **\n");
-    printf("                                    *** ***  **    ***      ***          **     **    **\n");
-    printf("                                      ** *** ********      * ***         **     **    **\n");
-    printf("                                       ** ** *******      *   ***        **     **    **\n");
-    printf("                                        * *  **          *     ***       **     **    **\n");
-    printf("                              ***        *   ****    *  *       *** *    **      ******\n");
-    printf("                             *  *********     *******  *         ***      **      ****\n");
-    printf("                            *     *****        *****\n");
-    printf("                            *\n");
-    printf("                             **\n");
-    printf("\n");
-    printf("\n");
-    printf("                          *******                                                  **\n");
-    printf("                        *       ***                             *       *           **\n");
-    printf("                       *         **                            **      ***          **\n");
-    printf("                       **        *                             **       *           **\n");
-    printf("                        ***                                  ********               **      ****\n");
-    printf("                       ** ***           ***    ***  ****    ********  ***       *** **     * ***  *\n");
-    printf("                        *** ***        * ***    **** **** *    **      ***     *********  *   ****\n");
-    printf("                          *** ***     *   ***    **   ****     **       **    **   ****  **    **\n");
-    printf("                            *** ***  **    ***   **    **      **       **    **    **   **    **\n");
-    printf("                              ** *** ********    **    **      **       **    **    **   **    **\n");
-    printf("                               ** ** *******     **    **      **       **    **    **   **    **\n");
-    printf("                                * *  **          **    **      **       **    **    **   **    **\n");
-    printf("                      ***        *   ****    *   **    **      **       **    **    **    ******\n");
-    printf("                     *  *********     *******    ***   ***      **      *** *  *****       ****\n");
-    printf("                    *     *****        *****      ***   ***              ***    ***\n");
-    printf("                    *\n");
-    printf("                     **\n");
-    puts("\a\a");
+printf("\n");	
+printf("\n");	
+printf("                               ##### \n");                                         
+printf("                              #     # ###### #    # #####  #### \n");              
+printf("                              #       #       #  #    #   #    # \n");             
+printf("                               #####  #####    ##     #   #    # \n");             
+printf("                                    # #        ##     #   #    # \n");             
+printf("                              #     # #       #  #    #   #    # \n");             
+printf("                               #####  ###### #    #   #    #### \n");              
+printf("\n");
+printf("\n");                                                
+printf("                               ##### \n");                                         
+printf("                              #     # ###### #    # ##### # #####   #### \n");     
+printf("                              #       #      ##   #   #   # #    # #    # \n");    
+printf("                               #####  #####  # #  #   #   # #    # #    # \n");    
+printf("                                    # #      #  # #   #   # #    # #    # \n");    
+printf("                              #     # #      #   ##   #   # #    # #    # \n");    
+printf("                               #####  ###### #    #   #   # #####   #### \n");     
+puts("\a\a");
     }
 void menu_principal(void){
     int op;
-    printf("Bem vindo ao jogo:\n\n");
-    printf("Selecione:\n\n");
-    printf("1- PLAY \t");
-    printf("2- OPTIONS  \t");
-    printf("3- EXIT \t");
+    printf("\nSelecione:\n\n");
+    printf("\t\t\t1 - JOGAR \t");
+    printf("\t\t\t2 - OPÇÕES  \t");
+    printf("\t\t\t3 - SAIR \t");
     scanf("%d",&op);
     if (op==1){
-
         introducao();
     }else if(op==2){
         options();
@@ -140,24 +119,26 @@ void menu_principal(void){
 void introducao(void){
     system("cls");
     printf("\nPersonagem: Laura\n\n");
-    printf("Laura, mulher pouco comum, em relacao ao tipo que estamos acostumados.\n");
-    printf("Ingressou na faculdade de administração aos 16 anos, no segundo ano de faculdade já era presidente de uma\n");
-    printf("empresa júnior de importação e exportação de produtos baratos produzido no Oriente. Na realidade Laura\n");
-    printf("introduziu o conceito da loja R$ 1,99. Aos 20 anos resolveu sair da casa dos seus pais, queria investir\n");
-    printf("seu talento e conhecimento se aventurando numa grande Metrópole, foi então quando se mudou para São Paulo,\n");
-    printf("cidade grande com milhões de habitantes. Em Sampa fez seu MBA em In Comerc e energia sustentável.\n");
-    printf("No seu primeiro emprego como trainee conheceu Rita, uma secretária executiva, que passou a ser sua melhor amiga.\n");
-    printf("As 25 anos, Laura resolve se mudar para uma pequena cidade turística, conhecida pelas suas maravilhosas estancias, a cidade de Xamy, \n");
-    printf("localizada no Nordeste brasileiro e muito visitada no verão. Ela queria investir em um produto genuinamente novo, o vento.  \n");
-    printf("Ela sentia que aquele seria um bom momento e o fez. Montou um parque de energia eólica.\n");
-    printf("Dez anos depois Laura já era presidente de uma companhia de médio porte com mais de duzentos empregados, \n");
-    printf("60 por cento dos moradores de Xamy eram seus empregados. Dona do maior parque eólico da região. Assim passou a ser conhecida como\n");
-    printf("“A garota dos ventos”, e aos 36 anos já é uma milionária. Com todo esse sucesso, ela ainda se sente frustrada, gostaria de \n");
-    printf("engravidar antes dos 40 anos. Apesar de ser uma grande empreendedora, Laura não consegue ter o mesmo desempenho quando \n");
-    printf("o assunto é relacionamento pessoal. Está solteira e nunca teve relacionamentos duradouros. Laura sempre atribui seu fracasso\n");
-    printf("ao fato de se dedicar inteiramente ao trabalho. Mas isso não é tudo. Ele teme ser enganada por algum homem,\n");
-    printf("se aproveitando de sua condição financeira. Fato passível de ocorrer.\n\n");
-    printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    printf("Laura, mulher pouco comum, em relacao ao tipo que estamos acostumados. Ingressou na faculdade \n");
+    printf("de administração aos 16 anos, no segundo ano de faculdade já era presidente de uma empresa \n");
+    printf("júnior de importação e exportação de produtos baratos produzido no Oriente. Na realidade \n");
+    printf("Laura introduziu o conceito da loja R$ 1,99. Aos 20 anos resolveu sair da casa dos seus pais, queria \n");
+    printf("investir seu talento e conhecimento se aventurando numa grande Metrópole, foi então quando se mudou \n");
+    printf("para São Paulo, cidade grande com milhões de habitantes. Em Sampa fez seu MBA em In Comerc e energia \n");
+    printf("sustentável. No seu primeiro emprego como trainee conheceu Rita, uma secretária executiva, que passou \n");
+    printf("a ser sua melhor amiga. As 25 anos, Laura resolve se mudar para uma pequena cidade turística, conhecida \n");
+    printf("pelas suas maravilhosas estancias, a cidade de Xamy,  localizada no Nordeste brasileiro e muito visitada \n");
+    printf("no verão. Ela queria investir em um produto genuinamente novo, o vento. Ela sentia que aquele seria um \n");
+    printf("bom momento e o fez. Montou um parque de energia eólica. Dez anos depois Laura já era presidente de uma \n");
+    printf("companhia de médio porte com mais de duzentos empregados, 60 por cento dos moradores de Xamy eram seus  \n");
+    printf("empregados. Dona do maior parque eólico da região. Assim passou a ser conhecida como “A garota dos ventos”, \n");
+    printf("e aos 36 anos já é uma milionária. Com todo esse sucesso, ela ainda se sente frustrada, gostaria de engravidar \n");
+    printf("antes dos 40 anos. Apesar de ser uma grande empreendedora, Laura não consegue ter o mesmo desempenho quando  o \n");
+    printf("assunto é relacionamento pessoal. Está solteira e nunca teve relacionamentos duradouros. Laura sempre atribui \n");
+    printf("seu fracasso ao fato de se dedicar inteiramente ao trabalho. Mas isso não é tudo. Ele teme ser enganada por \n");
+    printf("algum homem, se aproveitando de sua condição financeira. Fato passível de ocorrer.\n\n");
+    printf("\n\n Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    scanf("%c", &l);
     scanf("%c", &l);
     system("cls");
     if (l=='x'){
@@ -166,13 +147,13 @@ void introducao(void){
     introducao1();
     }
 void introducao1(void){
-
-    printf("\nPersonagem: Rita\n\n");
-    printf("Rita, 52 anos, atualmente divorciada.  Conheceu seu ex-marido no jardim de infância. Tiveram um casamento que durou 30 anos,\n");
-    printf("deste relacionamento tiveram uma filha. Por ter vivido um único relacionamento, não tem segurança para aconselhar as suas amigas,\n");
-    printf("mas é uma boa ouvinte. Praticou artes maciais durante 05 anos. Com o seu divórcio, foi convidada por\n");
-    printf("Laura para trabalhar na sua empresa, quando passou a dividir o apartamento com Maria.\n");
-    printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    printf("\n Personagem: Rita\n\n");
+    printf("Rita, 52 anos, atualmente divorciada.  Conheceu seu ex-marido no jardim de infância. Tiveram um casamento que\n");
+    printf(" durou 30 anos, deste relacionamento tiveram uma filha. Por ter vivido um único relacionamento, não tem \n");
+    printf("segurança para aconselhar as suas amigas, mas é uma boa ouvinte. Praticou artes maciais durante 05 anos. \n");
+    printf("Com o seu divórcio, foi convidada por Laura para trabalhar na sua empresa, quando passou a dividir o \n");
+    printf("apartamento com Maria.\n");
+    printf("\n\nPressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("cls");
     if (l=='x'){
@@ -181,13 +162,13 @@ void introducao1(void){
     introducao2();
     }
 void introducao2(void){
-    printf("\nPersonagem: Maria\n\n");
+    printf("\n Personagem: Maria\n\n");
     printf("Maria, embora nunca tenha saído da cidade onde nasceu, apresenta características nada típica daquele lugar, \n");
     printf("formada em Teatro, é uma excelente atriz, mas sua profissão não lhe garantiu grandes benefícios, \n");
     printf("uma vez que suas oportunidades foram bastantes fracas. Seu gosto por baladas, a mantem pouco \n");
     printf("distante do tipo de homem que gosta de se relacionar, pois os mesmos normalmente estão na faixa dos 50 anos. \n");
     printf("De todas as suas amigas, ela costuma se irritar com Ana Lucia, que sempre faz questão de lembrá-la que vive em uma vida de sonhos.\n");
-    printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    printf("\n\nPressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("cls");
     if (l=='x'){
@@ -196,13 +177,13 @@ void introducao2(void){
     introducao3();
 }
 void introducao3(void){
-    printf("\nPersonagem: Ana Lúcia\n\n");
+    printf("\n Personagem: Ana Lúcia\n\n");
     printf("Considerada a primeira dama da cidade, por ser herdeira de umas das famílias tradicionais de Xamy, \n");
     printf("Ana Lucia, esbanja sua riqueza de todas as formas possíveis. Muito carinhosa, essa sua característica a \n");
     printf("faz ser a mais próxima de todos as amigas, que embora não possam compartilhar ou ostentar dos mesmos \n");
     printf("privilégios e gostos, amam a sua presença. Tem um namorado e um filho, órfã de pai, \n");
     printf("deseja que sua amiga Carolina seja madrinha de seu filho. Mais conhecida como Carol, ela rejeita tal ideia.\n");
-    printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    printf("\n\nPressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("cls");
     if (l=='x'){
@@ -211,13 +192,13 @@ void introducao3(void){
     introducao4();
 }
 void introducao4(void){
-    printf("\nPersonagem: Carolina\n\n");
+    printf("\n Personagem: Carolina\n\n");
     printf("Principal amiga de Ana Lucia, Carolina ama tecnologia, foi a principal articuladora da implantação tecnológica \n");
     printf("do Parque Eólico, gerido pela empresa de Laura. Tem 42 anos, cresceu no único orfanato da cidade, \n");
     printf("costuma afirmar que não gosta de crianças, mesmo diante da insistência de Ana Lucia para que \n");
     printf("batize o seu filho. Costuma se relacionar com rapazes mais jovens, de no máximo 24 anos. Seu culto ao corpo, \n");
     printf("ultrapassa o limite da razão, pratica musculação todos os dias da semana e sempre se imagina acima do peso ideal.\n");
-    printf("Pressione qualquer tecla para continuar (x para pular a introdução)\n");
+    printf("\n\nPressione qualquer tecla para continuar (x para pular a introdução)\n");
     scanf("%c", &l);
     system("cls");
     if (l=='x'){
@@ -225,9 +206,8 @@ void introducao4(void){
     }
     parte1();
 }
-
 void parte1(void){
-    printf("\nAs cinco são amigas e estão na cidade de Xamy, conhecida por ser uma cidade turística.\n");
+	printf("\nAs cinco são amigas e estão na cidade de Xamy, conhecida por ser uma cidade turística.\n");
     printf("Realizam encontros ao menos uma vez por mês.\n");
     printf("Sempre se encontram no mesmo bar, pois gostam da caipitequila.\n");
     printf("Sempre conversam sobre a vida, seus medos e suas aventuras.\n");
@@ -236,7 +216,7 @@ void parte1(void){
     printf("e elas aceitaram o convite. No dia marcado, após meia hora, Carolina mandou uma mensagem no grupo\n");
     printf("perguntando por ela. Após 15 minutos, Carolina impaciente mandou uma mensagem no privado e ficou \n");
     printf("abismada pois a ultima visualização dela foi a duas horas atrás, o que não é normal para Ana Lúcia....\n");
-    printf("pressione qualquer tecla para começar...");
+    printf("\n\n Pressione qualquer tecla para começar...");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -244,11 +224,11 @@ void parte1(void){
     printf("1. Ligar para Ana \n");
     printf("2. Continuar bebendo \n");
     scanf("%c",&l);
-    
     if (l=='1'){
         system("cls");
         printf("XP: %d\n",score);
-        printf("Laura logo percebe que a situação é atípica e olha firmemente para seu telefone e inconformada com o clima ruim que logo se estabelece, resolveu ligar.\n");
+        printf("Laura logo percebe que a situação é atípica e olha firmemente para seu telefone e inconformada com\n");
+		printf("o clima ruim que logo se estabelece, resolveu ligar.\n");
         capitulo1();
     }else if(l=='2'){
         system("cls");
@@ -260,8 +240,6 @@ void parte1(void){
         parte1();
     }
 }
-
-
 void continuar(void){
     int x;
     printf("\nDigite 1 para continuar ou qualquer outro valor para sair do jogo\n");
@@ -274,7 +252,6 @@ void continuar(void){
         exit(0);
         }
     }
-
 //capitulo1
 void capitulo1(void){
     int x,y;
@@ -286,7 +263,7 @@ void capitulo1(void){
          printf("Se ao atender ao telefone uma voz masculina nervosa, dizendo que foi engano, não tivesse aumentado ainda mais a angustia das moças.\n");
          printf("As amigas acham que pode ser o namorado, que Ana Lucia havia comentado em um dos encontros.\n");
          printf("e a ligação acaba!\n");
-         printf("pressione qualquer tecla para continuar...");
+         printf("\n\n pressione qualquer tecla para continuar...");
          scanf("%c",&l);
          system("cls");
          printf("XP: %d\n",score);
@@ -300,7 +277,6 @@ void capitulo1(void){
         capitulo1_2(); //não atende
      }
 }
-
 //capitulo1.1
 void capitulo1_1(void){
     printf("capitulo 1.1\n");
@@ -309,7 +285,7 @@ void capitulo1_1(void){
     printf("-Alô quem está falando aqui é o John, eu já falei que a senhora ligou errado. Por favor não me incomode.\n");
     printf("Animada Laura reconhece o nome John e disse ser o novo affair de Ana Lucia. Contudo se esquece de um detalhe muito importante relatado por Carol.\n");
     printf("Carol disse que Ana Lúcia chama qualquer affair de John, costumes de amigas. Com isso a possibilidade de que o sujeito não estivesse falando a verdade estava pairando no ar.\n");
-    printf("pressione qualquer tecla para continuar...");
+    printf("\n\n pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -320,7 +296,6 @@ void capitulo1_1(void){
     /*if (l=='1'){
     }else if(l='2'){
     }*/
-
 }
 //capitulo1.2
 void capitulo1_2(void){
@@ -329,7 +304,7 @@ void capitulo1_2(void){
     printf("Rita tentou ligar novamente para a amiga, mas o celular não funcionava, o tempo parecia ter parado, nuvens negras no céu e uma grande tempestade se formou.\n");
     printf("As janelas e as portas do bar se abriam e fechavam com muita força, mas ninguém parecia perceber ou não ligavam para os estranhos acontecimentos, Rita e Maria continuavam conversando e sorrindo. \n");
     printf("Um comportamento muito estranho para aquele momento tão tenso.\n");
-    printf("pressione qualquer tecla para continuar...");
+    printf("\n\n pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -343,11 +318,10 @@ void capitulo1_2(void){
         capitulo1_2_3();
     }
 }
-
 //capitulo 1.2.1
 void capitulo1_2_1(void){
     printf("capitulo 1.2.1\n");
-    printf("pressione qualquer tecla para continuar...");
+    printf("\n\n pressione qualquer tecla para continuar...");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -385,13 +359,11 @@ void capitulo1_2_1(void){
             capitulo1_2_1_3();
          }
      }
-
 }
-
 //capitulo1_2_1_3()
 void capitulo1_2_1_3(void){
     printf("Laura encostou o ouvido na porta  da frente, quando  ouviu  mais de uma pessoa na sala, passos de uma pessoa usando botas molhadas correndo. Ela desceu assustada para pedir ajuda e todas pareciam não entender ou escutar o que ela dizia. Entrou em desespero.");
-    printf("pressione qualquer tecla para continuar.\n");
+    printf("\n\npressione qualquer tecla para continuar.\n");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -410,13 +382,12 @@ void capitulo1_2_1_3(void){
         capitulo1_2_1_3_1();
     }
 }
-
 //capitulo1_2_1_3_1()
 void capitulo1_2_1_3_1(void){
     printf("ninguem atende...\n");
     printf("Mesmo tendo escutado mais de uma pessoa conversando na sala, Laura desconfia, pois ninguém atende a porta");
     printf("Conversando com Maria , Laura decide...");
-    printf("pressione qualquer tecla para continuar.\n");
+    printf("\n\npressione qualquer tecla para continuar.\n");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -435,11 +406,10 @@ void capitulo1_2_1_3_1(void){
         capitulo1_2_1_3_1_2();
     }
 }
-
 //capitulo1_2_1_3_1_2()
 void capitulo1_2_1_3_1_2(void){
     printf("encontram uma janela aberta\n");
-    printf("pressione qualquer tecla para continuar.\n");
+    printf("\n\npressione qualquer tecla para continuar.\n");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -458,7 +428,6 @@ void capitulo1_2_1_3_1_2(void){
         }
     }
 }
-
 //capitulo1_2_1_3
 void capitulo1_2_1_4(void){
     printf("Carolina nunca teve coragem de entrar na casa da sua melhor amiga, para ela, ");
@@ -467,7 +436,7 @@ void capitulo1_2_1_4(void){
     printf("Maria entrou logo depois de Laura, sem demonstrar nenhum sinal de medo, em seguida");
     printf(" a luz se apagou e ela gritou sem parar...");
     printf("Laura pediu que ela ficasse calma, pois poderia chamar a atenção");
-    printf("pressione qualquer tecla para continuar.\n");
+    printf("\n\npressione qualquer tecla para continuar.\n");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -481,12 +450,11 @@ void capitulo1_2_1_4(void){
         capitulo1_2_1_3_1();
     }
 }
-
 //capitulo1_2_1_3_1
 void capitulo1_2_1_3_3(void){
    printf("elas encontram um quarto aberto\n");
    printf("As mãos de Laura passeiam vagarosamente sobre uma penteadeira, encontrando um pente de largos dentes, utilizado por pessoas do cabelo crespo, na sua forma  original, . Mais um mistério... Ana Lúcia jamais usaria aquele tipo de artefato nas suas madeixas loiras. Todas estavam se perguntando a quem aquele pente pertencia?");
-   printf("pressione qualquer tecla para continuar.\n");
+   printf("\n\npressione qualquer tecla para continuar.\n");
    scanf("%c",&l);
    system("cls");
    printf("XP: %d\n",score);
@@ -500,11 +468,10 @@ void capitulo1_2_1_3_3(void){
        capitulo1_2_1_3_1_3();
    }
 }
-
 //capitulo1_2_1_3_1_1()
 void capitulo1_2_1_3_1_1(void){
     printf("Ao mostrar o pente para as amigas, percebesse muitas dúvidas e insegurança no ar, aquele pente seria um sinal de que algo estava errado");
-    printf("pressione qualquer tecla para continuar.\n");
+    printf("\n\npressione qualquer tecla para continuar.\n");
     scanf("%c",&l);
     system("cls");
     printf("XP: %d\n",score);
@@ -517,9 +484,7 @@ void capitulo1_2_1_3_1_1(void){
     }else if(l=='2'){
         printf("completar");
     }
-
 }
-
 //capitulo1_2_1_3_1_1_1()
 void capitulo1_2_1_3_1_1_1(void){
     printf("Carolina ver o pente e argumenta com Laura");
@@ -540,9 +505,7 @@ void capitulo1_2_1_3_1_3(void){
     }else if(x==2){
         printf("completar");
     }
-
 }
-
 //capitulo1_2_3();
 void capitulo1_2_3(void){
     printf("completar");
@@ -560,9 +523,6 @@ void capitulo1_2_3(void){
 
     }
 }
-
-
-
 //capitulo1.2.1.1:
 void capitulo1_2_1_1(void){
     printf("capitulo 1.2.1.1\n");
@@ -580,7 +540,6 @@ void capitulo1_2_1_1(void){
         capitulo2_1_1_1();
     }
 }
-
 //capitulo1_2_1_2
 int capitulo1_2_1_2(void){
     printf("capitulo 1.2.1.2\n");
@@ -599,11 +558,8 @@ int capitulo1_2_1_2(void){
      }
 
 }
-
-
 //capitulo2
 void capitulo2(void){
-
     printf("capitulo 2\n");
     printf("pressione qualquer tecla para continuar...");
     scanf("%c",&l);
@@ -624,7 +580,6 @@ void capitulo2(void){
     }
 
 }
-
 //capitulo 2.1
 void capitulo2_1(void){
     printf("capitulo 2.1\n");
@@ -670,7 +625,6 @@ void capitulo2_1_1(void){
         printf("completar...");
     }
 }
-
 //capitulo 2.1.1.1:
 void capitulo2_1_1_1(void){
     int x;
@@ -683,7 +637,6 @@ void capitulo2_1_1_1(void){
         capitulo2_1_1_1_2();
      }
 }
-
 //capitulo2_1_1_1_1
 void capitulo2_1_1_1_1(void){
     printf("capitulo 2.1.1.1.1:\n");
@@ -706,7 +659,6 @@ void capitulo2_1_1_1_1(void){
         }
     }
 }
-
 //capitulo2_1_1_1_2
 void capitulo2_1_1_1_2(void){
     printf("capitulo 2.1.1.1.2:\n");
@@ -727,21 +679,20 @@ void capitulo2_1_1_1_2(void){
     }
 
 }
-
-
 //capitulo 2.2
 void capitulo2_2(void){
     printf("capitulo 2.2\n");
     system("cls");
     printf("XP: %d\n",score);
     capitulo1_1();
-
 }
 
 //INÍCIO DO PROGRAMA
 int main()
+
 {
-    score=0;
+	setlocale(LC_ALL, "Portuguese");    
+	score=0;
     nome_jogo();
     menu_principal();
 
